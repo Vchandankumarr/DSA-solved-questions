@@ -1,0 +1,35 @@
+1) Two Pointers and sliding window classese and assignment
+
+classes 
+https://course.masaischool.com/lectures/38996
+https://course.masaischool.com/lectures/39105
+
+
+https://oj.masaischool.com/contest/5815/problems
+
+https://oj.masaischool.com/contest/5876/problems
+
+
+Sliding Window 
+https://course.masaischool.com/lectures/39201
+
+notes 
+https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-10-21/B20-S3-Day-4-32-37_789274.pdf
+
+
+https://course.masaischool.com/lectures/39276
+
+notes 
+https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-10-20/B20-S3-Day-3-23-31_658603.pdf
+
+
+2) Sorting
+
+class 
+https://course.masaischool.com/lectures/39569
+https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-11-02/B20-S4-Day-1_618902.pdf
+
+https://oj.masaischool.com/contest/5928/problems
+
+psc
+https://course.masaischool.com/lectures/39871
