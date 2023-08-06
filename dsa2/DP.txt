@@ -1,0 +1,21 @@
+    DP, short for Dynamic Programming, is a problem-solving technique used to solve complex problems by breaking them down into overlapping subproblems and efficiently solving each subproblem only once. It is typically applied to optimization problems where we want to find the best solution among a set of possible solutions.
+
+    The key idea behind dynamic programming is to store the solutions to subproblems in a table or cache, so that we can avoid redundant computations when solving larger problems. By solving each subproblem once and storing its solution, we can reuse those solutions to solve larger problems that depend on the same subproblems.
+
+    Dynamic programming typically follows a series of steps:
+
+    1. **Identify the problem**: Determine if the problem can be solved using dynamic programming. Dynamic programming is well-suited for problems with overlapping subproblems and optimal substructure properties.
+
+    2. **Define the state**: Identify the parameters that uniquely define a subproblem. The state could be as simple as an index or a combination of multiple variables.
+
+    3. **Formulate the recurrence relation**: Express the solution to a larger problem in terms of the solutions to its subproblems. This is often done using a recurrence relation or formula that relates the current state to its previous states.
+
+    4. **Design the algorithm**: Determine the order in which the subproblems should be solved to ensure that the solutions to smaller subproblems are already available when needed.
+
+    5. **Solve the subproblems**: Apply the recurrence relation iteratively or recursively to solve the subproblems. Store the solutions in a table or cache to avoid redundant computations.
+
+    6. **Build the final solution**: Use the solutions to the subproblems to construct the final solution to the original problem.
+
+    Dynamic programming can significantly improve the efficiency of solving problems by avoiding unnecessary recomputations. By breaking down a problem into smaller subproblems and reusing their solutions, dynamic programming allows us to solve problems in polynomial time that would otherwise require exponential time.
+
+    It's important to note that not all problems can be solved using dynamic programming. The presence of overlapping subproblems and optimal substructure are essential characteristics for dynamic programming to be applicable. However, many well-known algorithms and problems, such as the Fibonacci sequence, shortest paths, and knapsack problems, can be effectively solved using dynamic programming techniques.
