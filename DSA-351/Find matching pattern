@@ -1,0 +1,16 @@
+function findMatching(n,m,str,pat){
+    // write code here
+    let flag="No"
+    for(let i=0;i<n;i++){
+        let bag=""
+        for(let j=i;j<n;j++){
+            bag+=str[j]
+            
+            if(bag==pat){
+                flag="Yes"
+            }
+        }
+    }
+    console.log(flag)
+    
+}

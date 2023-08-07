@@ -1,0 +1,44 @@
+function Minimizenumberofcoins(n){
+    //console.log(n)
+    let count=0
+    let supply=[1,2,5,10,20,50,100,500,1000]
+    supply.sort((a,b)=>b-a)
+    //console.log(supply)
+    for(let i=0;i<supply.length;i++){
+        count+=Math.floor(n/supply[i])
+        n=n%supply[i]
+    }
+    console.log(count)
+    
+}
+function runProgram(input) {
+  // Write code here
+  input=input.split("\n")
+  let t=+input[0]
+  let line=1
+  for(let i=0;i<t;i++){
+      let n=input[line++]
+      Minimizenumberofcoins(n)
+  }
+}
+
+if (process.env.USER === "") {
+  runProgram(``);
+} else {
+  process.stdin.resume();
+  process.stdin.setEncoding("ascii");
+  let read = "";
+  process.stdin.on("data", function (input) {
+    read += input;
+  });
+  process.stdin.on("end", function () {
+    read = read.replace(/\n$/, "");
+    read = read.replace(/\n$/, "");
+    runProgram(read);
+  });
+  process.on("SIGINT", function () {
+    read = read.replace(/\n$/, "");
+    runProgram(read);
+    process.exit(0);
+  });
+}

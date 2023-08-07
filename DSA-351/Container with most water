@@ -1,0 +1,50 @@
+function conWithWater(n,arr){
+    //console.log(n,arr)
+    let max=0
+    let l=0
+    let r=arr.length-1
+    while(l<r){
+        w=r-l
+        max=(Math.max(max, Math.min(arr[l], arr[r])*w))
+        if(arr[l]<=arr[r]){
+            l++
+        }
+        else{
+            r--
+        }
+    }
+    console.log(max)
+}
+
+function runProgram(input) {
+  // Write code here
+  input=input.split("\n")
+  let t=+input[0]
+  let line=1
+  for(let i=0;i<t;i++){
+      let n=+input[line++]
+      let arr=input[line++].trim().split(" ").map(Number)
+      conWithWater(n,arr)
+  }
+}
+
+if (process.env.USER === "") {
+  runProgram(``);
+} else {
+  process.stdin.resume();
+  process.stdin.setEncoding("ascii");
+  let read = "";
+  process.stdin.on("data", function (input) {
+    read += input;
+  });
+  process.stdin.on("end", function () {
+    read = read.replace(/\n$/, "");
+    read = read.replace(/\n$/, "");
+    runProgram(read);
+  });
+  process.on("SIGINT", function () {
+    read = read.replace(/\n$/, "");
+    runProgram(read);
+    process.exit(0);
+  });
+}

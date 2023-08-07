@@ -1,0 +1,25 @@
+const LinkedListNode = class {
+    constructor(nodeData) {
+        this.data = nodeData;
+        this.next = null;
+    }
+};
+
+var deleteXAfterY = function(head, n, x, y) {
+    let curr=head
+    let prev=null
+    
+    while(curr){
+        for(let i=0;i<x&&curr!=null;i++){
+            prev=curr
+            curr=curr.next
+        }
+        for(let j=0;j<y&&curr!=null;j++){
+            curr=curr.next
+        }
+        prev.next=curr
+    }
+    return head
+    
+};
+

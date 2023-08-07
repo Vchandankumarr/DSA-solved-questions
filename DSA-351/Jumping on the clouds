@@ -1,0 +1,51 @@
+function Jumpingontheclouds(n,arr){
+    //console.log(n,arr)
+    let i=0
+    let jumps=0
+    while(i<n){
+        if(arr[i+2]==0){
+            i=i+2
+            jumps++
+        }
+        //console.log(jumps)
+        else{
+            jumps++
+            i++
+        }
+       
+    }
+    console.log(jumps-1)
+}
+
+function runProgram(input) {
+  // Write code here
+  input=input.split("\n")
+  let t=+input[0]
+  let line=1
+  for(let i=0;i<t;i++){
+      let n=+input[line++]
+      let arr=input[line++].trim().split(" ").map(Number)
+      Jumpingontheclouds(n,arr)
+  }
+}
+
+if (process.env.USER === "") {
+  runProgram(``);
+} else {
+  process.stdin.resume();
+  process.stdin.setEncoding("ascii");
+  let read = "";
+  process.stdin.on("data", function (input) {
+    read += input;
+  });
+  process.stdin.on("end", function () {
+    read = read.replace(/\n$/, "");
+    read = read.replace(/\n$/, "");
+    runProgram(read);
+  });
+  process.on("SIGINT", function () {
+    read = read.replace(/\n$/, "");
+    runProgram(read);
+    process.exit(0);
+  });
+}

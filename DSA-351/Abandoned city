@@ -1,0 +1,49 @@
+function Abandonedcity(n,k,arr){
+    let min=Infinity
+    let flag=false
+    let l=0
+    let sum=0
+    for(let i=0;i<n;i++){
+        sum+=arr[i]
+        while(sum>=k){
+            min=Math.min(min,i-l+1)
+                flag=true
+                sum-=arr[l]
+                l++
+            
+        }
+    }
+    flag==true? console.log(min): console.log("-1")
+}
+function runProgram(input) {
+  // Write code here
+  input=input.split("\n")
+  let t=+input[0]
+  let line=1
+  for(let i=0;i<t;i++){
+      let [n,k]=input[line++].trim().split(" ").map(Number)
+      let arr=input[line++].trim().split(" ").map(Number)
+      Abandonedcity(n,k,arr)
+  }
+}
+
+if (process.env.USER === "") {
+  runProgram(``);
+} else {
+  process.stdin.resume();
+  process.stdin.setEncoding("ascii");
+  let read = "";
+  process.stdin.on("data", function (input) {
+    read += input;
+  });
+  process.stdin.on("end", function () {
+    read = read.replace(/\n$/, "");
+    read = read.replace(/\n$/, "");
+    runProgram(read);
+  });
+  process.on("SIGINT", function () {
+    read = read.replace(/\n$/, "");
+    runProgram(read);
+    process.exit(0);
+  });
+}

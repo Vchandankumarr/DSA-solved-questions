@@ -1,0 +1,17 @@
+function rowMax(N,M,arr){
+    //write code here
+    let max=[]
+    for(let i=0;i<N;i++){
+        let bag=arr[i][0]
+        
+        for(let j=1;j<arr[i].length;j++){
+            if(arr[i][j]>bag){
+                bag=arr[i][j]
+            }
+        }
+        max.push(bag)
+        
+    }
+    console.log(...max)
+    
+}

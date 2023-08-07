@@ -1,0 +1,16 @@
+function atillasProblem(n,str){
+    // write code here
+    let lower="abcdefghijklmnopqrstuvwxyz"
+    let min=0
+    for(let i=0;i<n;i++){
+        for(let j=0;j<26;j++){
+            if(str[i]==lower[j]){
+                if(j>min){
+                    min=j
+                }
+            }
+        }
+    }
+    console.log(min+1)
+    
+}

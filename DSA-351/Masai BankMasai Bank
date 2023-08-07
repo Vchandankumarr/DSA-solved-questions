@@ -1,0 +1,43 @@
+function runProgram(input) {
+  // Write code here
+  input=input.split('\n')
+  let n=+input[0]
+  let line=1
+  let que=[]
+  for(let i=0;i<n;i++){
+      if(+input[line]==2){
+          if(que.length==0){
+              console.log("No More Tokens")
+          }
+          else{
+              console.log(que.shift())
+          }
+      }
+      else{
+          let [a,b]=input[line].split(" ")
+          que.push(+b)
+      }
+      line++
+  }
+}
+
+if (process.env.USER === "") {
+  runProgram(``);
+} else {
+  process.stdin.resume();
+  process.stdin.setEncoding("ascii");
+  let read = "";
+  process.stdin.on("data", function (input) {
+    read += input;
+  });
+  process.stdin.on("end", function () {
+    read = read.replace(/\n$/, "");
+    read = read.replace(/\n$/, "");
+    runProgram(read);
+  });
+  process.on("SIGINT", function () {
+    read = read.replace(/\n$/, "");
+    runProgram(read);
+    process.exit(0);
+  });
+}
